@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kilonzo Trading Hub</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#07111f;color:#eef5ff}
+header{padding:20px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #1c3048}
+.logo{font-size:22px;font-weight:800}.logo span{color:#35d07f}
+button{border:0;border-radius:10px;padding:12px 18px;font-weight:700;cursor:pointer}
+.login{background:#14243a;color:white}.hero{padding:45px 6%;text-align:center}
+.hero h1{font-size:42px;margin:10px 0}.hero p{color:#9eb0c6}
+.container{width:88%;max-width:1100px;margin:auto}
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:20px}
+.card{background:#0d1b2d;border:1px solid #1c3048;border-radius:16px;padding:20px;margin-bottom:20px}
+.card h2{margin-top:0;font-size:18px}
+.markets{display:flex;gap:10px;flex-wrap:wrap}.market{padding:12px 16px;background:#14243a;border-radius:10px}
+.market.active{background:#174d38;border:1px solid #35d07f}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{font-size:12px;color:#9eb0c6}input,select{width:100%;padding:12px;margin-top:6px;border-radius:8px;border:1px solid #2a405b;background:#081524;color:white}
+.start{width:100%;background:#35d07f;color:#03120a;margin-top:16px}.stop{width:100%;background:#e65353;color:white;margin-top:10px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}.stat{background:#14243a;padding:15px;border-radius:10px}.stat small{color:#9eb0c6}.stat strong{display:block;font-size:20px;margin-top:5px}
+.notice{padding:12px;border-radius:9px;background:#132a22;color:#8ff0bb;font-size:13px}
+footer{text-align:center;color:#71849a;padding:35px}
+@media(max-width:750px){.grid{grid-template-columns:1fr}.hero h1{font-size:32px}.fields{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="logo">KILONZO <span>TRADING HUB</span></div><button class="login">LOGIN</button></header>
+<section class="hero"><h1>Smarter Trading. Better Control.</h1><p>A professional trading dashboard for strategy management and analysis.</p></section>
+<main class="container">
+<div class="notice">Demo mode: this dashboard does not place real trades.</div><br>
+<div class="grid">
+<section>
+<div class="card"><h2>Select Market</h2><div class="markets">
+<div class="market active">Volatility 10</div><div class="market">Volatility 25</div><div class="market">Volatility 50</div><div class="market">Volatility 75</div><div class="market">Volatility 100</div>
+</div></div>
+<div class="card"><h2>Bot Configuration</h2>
+<div class="fields">
+<div><label>Contract</label><select><option>Over / Under</option><option>Even / Odd</option><option>Digit Differ</option><option>Rise / Fall</option></select></div>
+<div><label>Duration</label><input value="5 ticks"></div>
+<div><label>Stake</label><input value="1.00"></div>
+<div><label>Prediction</label><input value="4"></div>
+<div><label>Take Profit</label><input value="5.00"></div>
+<div><label>Stop Loss</label><input value="3.00"></div>
+</div>
+<button class="start" onclick="alert('Demo mode: bot started.')">START BOT</button>
+<button class="stop" onclick="alert('Demo mode: bot stopped.')">STOP BOT</button>
+</div>
+</section>
+<aside>
+<div class="card"><h2>Account Overview</h2><div class="stats">
+<div class="stat"><small>Balance</small><strong>$25.40</strong></div>
+<div class="stat"><small>Profit/Loss</small><strong>+$4.80</strong></div>
+<div class="stat"><small>Wins</small><strong>18</strong></div>
+<div class="stat"><small>Losses</small><strong>7</strong></div>
+</div></div>
+<div class="card"><h2>Performance</h2><div class="stat"><small>Win Rate</small><strong>72%</strong></div></div>
+</aside>
+</div></main>
+<footer>© 2026 Kilonzo Trading Hub · Demo Dashboard</footer>
+</body>
+</html>
